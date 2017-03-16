@@ -2,7 +2,7 @@
 
 #禁用当前format文件
 DisableFormat: false
-#BasedOnStyle: WebKit
+BasedOnStyle: Google
 
 #是否使用tab进行缩进
 UseTab: Never
