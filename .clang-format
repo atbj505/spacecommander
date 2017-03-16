@@ -17,19 +17,12 @@ Standard: Cpp11
 #最大宽度,如果代码超过这个宽度会按语义折行
 ColumnLimit: 0
 
-#最多能超出ColumnLimit多少个字符
-PenaltyExcessCharacter: 0
-
 #允许最大连续空行数
 MaxEmptyLinesToKeep: 2
 
 #在续行(\  
 #     下一行)时的缩进长度
 ContinuationIndentWidth: 4
-
-
-#CommentPragmas: ''
-#DerivePointerBinding: false
 
 #--------------------------code block------------------
 #括号的断行模式
