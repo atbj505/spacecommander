@@ -15,7 +15,7 @@ Standard: Cpp11
 
 #-----------------------file----------------------
 #最大宽度,如果代码超过这个宽度会按语义折行
-ColumnLimit: 130
+ColumnLimit: 0
 
 #最多能超出ColumnLimit多少个字符
 PenaltyExcessCharacter: 0
