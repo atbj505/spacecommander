@@ -24,13 +24,11 @@ ThisIsAMacroThatIsMissingASemicolon();
 typedef struct IOHIDDeviceTransactionInterface {
 }
 
-ThisIsAMacroThatShouldNotHaveASemicolonAppended()
-{
+ThisIsAMacroThatShouldNotHaveASemicolonAppended() {
     // do stuff
 }
 
-BOOL extraSemicolonsNotInsertedAfterCGStructInitializer()
-{
+BOOL extraSemicolonsNotInsertedAfterCGStructInitializer() {
     CAShapeLayer *contentViewVerticalDividerLayer = [TAFStyles lineShapeLayerFromPoint:CGPointMake(0.0f,
                                                                                                    CGRectGetHeight(contentView.bounds) - hairline)
                                                                                toPoint:CGPointMake(CGRectGetWidth(contentView.bounds),
@@ -91,8 +89,7 @@ struct Update {
 
 @implementation ProblemChild
 
-- (void)methodWithParams:(NSString *)param1 another:(BOOL)param2
-{
+- (void)methodWithParams:(NSString *)param1 another:(BOOL)param2 {
     SQSelfSelector1(_windowDidResignKeyNotification:);
     NSString *keys = [NSSet setWithArray:@[
         SQTypedKeyPath(MQItemControl, highlighted),
@@ -104,8 +101,7 @@ struct Update {
     SQCheckCondition(NO, , @"Will the commas stay together?");
 }
 
-- (BOOL)methodThatReturnsSomething
-{
+- (BOOL)methodThatReturnsSomething {
     ThisIsAMacroThatIsMissingASemicolon("I need a semicolon");
     BOOL bleh = @"a" == nil;
     BOOL blah = bleh ?: YES;
@@ -151,8 +147,7 @@ struct Update {
     }];
 }
 
-- (void)paranthesisInMessage
-{
+- (void)paranthesisInMessage {
     // The formatters can't distinguish between inline operators and casts, unfortunately.
     // We're either going to add or remove a space after the parens below.
     [headers setObject:(squareInstallationIdentifier ?: @"Unavailable") forKey:@"X-Device-Installation-ID"];
@@ -162,9 +157,10 @@ struct Update {
     [self methodWithParams:NSStringFromClass(self.class) another:NO];
 }
 
-- (void)shortMethod {}
-- (void)dictsInArray
-{
+- (void)shortMethod {
+}
+
+- (void)dictsInArray {
     NSArray *dictionaries = @[
         @{
             @"token" : @"aaa",
@@ -179,13 +175,11 @@ struct Update {
     ];
 }
 
-BOOL CStyleMethod()
-{
+BOOL CStyleMethod() {
     return false;
 }
 
-INSAFSuccessBlock INSAPIClientModelSuccessHandler(Class mantleClass, NSString *__nullable keyPath, INSHTTPSuccess __nullable success, INSHTTPFailure __nullable failure)
-{
+INSAFSuccessBlock INSAPIClientModelSuccessHandler(Class mantleClass, NSString *__nullable keyPath, INSHTTPSuccess __nullable success, INSHTTPFailure __nullable failure) {
     return INSAPIClientModelSuccessChain(mantleClass, keyPath, ^(__kindof INSModel *model, id _) {
         if (success) {
             success(model);
@@ -193,8 +187,7 @@ INSAFSuccessBlock INSAPIClientModelSuccessHandler(Class mantleClass, NSString *_
     }, failure);
 }
 
-- (void)fetchWithSuccess:(nullable dispatch_block_t)success failure:(nullable INSHTTPFailure)failure
-{
+- (void)fetchWithSuccess:(nullable dispatch_block_t)success failure:(nullable INSHTTPFailure)failure {
     [self GET:@"data" parameters:nil success:INSAPIClientModelArraySuccessChain([INSModel class], nil, ^(INSModel *model, id responseObject) {
         if (success) {
             success();
@@ -202,8 +195,7 @@ INSAFSuccessBlock INSAPIClientModelSuccessHandler(Class mantleClass, NSString *_
     }, failure) failure:failure];
 }
 
-- (void)postWithSuccess:(nullable INSHTTPSuccess)success failure:(nullable INSHTTPFailure)failure
-{
+- (void)postWithSuccess:(nullable INSHTTPSuccess)success failure:(nullable INSHTTPFailure)failure {
     id imageData = nil;
     [self POST:@"endpoint" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         if (imageData) {
