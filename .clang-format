@@ -59,13 +59,13 @@ IndentWidth:     4
 TabWidth:        4
 UseTab:          Never
 BreakBeforeBraces: Custom
-BraceWrapping: 
-    AfterClass: true
+BraceWrapping:
+    AfterClass: false
     AfterControlStatement: false
     AfterEnum: false
     AfterFunction: false
-    AfterNamespace: true
-    AfterObjCDeclaration: true
+    AfterNamespace: false
+    AfterObjCDeclaration: false
     AfterStruct: false
     AfterUnion: false
     BeforeCatch: false
